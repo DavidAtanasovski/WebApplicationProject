@@ -1,0 +1,64 @@
+﻿body {
+    background-color:rgba(0, 0, 0, 0.90);
+}
+
+.smallimg {
+    width: 50px;
+    height: auto;
+}
+
+.text1 {
+    font-family: Arial;
+    font-size: 30px;
+    color:#949494;
+    font-weight:bold;
+}
+
+.smallimg1{
+    width:30px;
+    height:auto;
+}
+
+.smallimg2{
+    width:40px;
+    height:auto;
+}
+
+.smallimg3{
+    width:60px;
+    height:auto;
+}
+
+.text2 {
+    color: #949494;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logimg{
+    width:100%;
+    height:auto;
+}
+
+.firstletter {
+    float: left;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: bold;
+    margin-right: 9px;
+}
+
+
+
+
+.btn-warning {
+    background-color: #b89e62;
+    color: rgba(0, 0, 0, 0.87);
+    border-color: rgba(184, 158, 98, 0.79);
+}
+
+.btn-warning:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #2F3E48;
+    color: #FFF;
+    border-color: #31347B;
+}

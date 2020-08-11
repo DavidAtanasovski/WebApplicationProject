@@ -1,0 +1,45 @@
+﻿@page
+@model WebApplicationProject.Pages.PlayerSupport.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>Player Username</p>
+            </th>
+            <th>
+                Subject
+            </th>
+           
+            
+
+        </tr>
+    </thead>
+    @foreach (var player in Model.playerSupports)
+    {
+
+
+<tr style="font-size:20px; font-family:Arial; font-style:italic; font-weight:bold;">
+
+    <td>
+        @player.Username
+    </td>
+    <td>
+        @player.Subject
+    </td>
+    <td>
+        <a class="btn btn-outline-secondary" asp-page="./Detail" asp-route-PlayerSupportId="@player.Id">
+            <i class="fas fa-search-plus"></i>
+        </a>
+    </td>
+
+</tr>
+     }
+</table>

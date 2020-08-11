@@ -1,0 +1,332 @@
+﻿@page
+@{
+    ViewData["Title"] = "Homepage";
+}
+
+    <head>
+        <link href="~/css/Homepage.css" rel="stylesheet" type="text/css" />
+
+       <script type="text/javascript" src="~/js/jquery-1.11.3.min.js"></script>
+
+    </head>
+
+    <body class="container-fluid">
+
+        
+        
+
+        <div  class="text1 col-sm-12 ">
+            <p id="hi"> Welcome to my League of Legends <br />website project</p>
+            <a id="play" style="color:dimgrey; font-style:italic;  font-weight:bold; font-family:Arial; text-decoration:none;" asp-page="Downloadpage">Play now!</a>
+        </div>
+
+        <div class="col-sm-12">
+            <video class="video1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" autoplay muted loop />
+
+        </div>
+
+        <div class="col-sm-12">
+            <br />
+            <p id="choose" class="text2">Choose your</p>
+            <p id="champ" class="text3">CHAMPION</p>
+            <p id="wether" class="text4">
+                Whether you like to dive straight into the fray, support your teammates, or <br /> something in between, there’s a spot for you on the Rift.
+            </p>
+            <br />
+            <br />
+        </div>
+
+        <div class="col-sm-12">
+            <p id="classs" class="text5">Classes</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p id="assassin" class="text6">Assassins</p>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <video class="video2" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/assassin-8bb741f0fe6d55c0844ede6e3fe1b5ad.webm" autoplay muted loop />
+
+            </div>
+            <div class="form-group col-sm-6">
+                <img class="img1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png" />
+
+            </div>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <p id="AssInfo" style="text-align:justify" class=" Info"> "Assassins" are fragile but agile damage-focused melee champions that look to swiftly take down their targets. Due to their mostly melee nature, Assassins must put them themselves into dangerous positions in order to execute their targets.</p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <a asp-page="./Champions/List" style="text-decoration:none; color:rgba(0, 0, 0, 0.81) " id="akali" class="champname"> Akali </a>
+                <p id="rogue" class="champinfo">The Rogue Assassin</p>
+            </div>
+
+        </div>
+
+        <div class="col-sm-12">
+            <p id="fighter" class="text6">Fighters</p>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <video class="video2" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/fighter-56f0e81707c5104dd35ee7a2b1d8e72a.webm" autoplay muted loop />
+            </div>
+            <div class="form-group col-sm-6">
+                <img class="img1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/fighter-7a08920b696ecdb673edeeae1d3c616e.png" />
+            </div>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <p id="fighters" style="text-align:justify" class="Info"> Fighters are a diverse group of short-ranged combatants who excel at both dealing and surviving damage.  With easy access to heavy, continuous damage and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, but their limited range puts them at constant risk of being kept at bay by their opponents via crowd control, range and mobility.</p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <a asp-page="./Champions/List" style="text-decoration:none; color:rgba(0, 0, 0, 0.81) " id="yas" class="champname"> Yasuo </a>
+                <p id="unforgiven" class="champinfo">The Unforgiven</p>
+            </div>
+
+        </div>
+
+        <div class="col-sm-12">
+            <p id="mage" class="text6">Mages</p>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <img class="img1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/mage-3bfa6dfe620adafe5e539c2e470f4acc.png" />
+            </div>
+            <div class="form-group col-sm-6">
+                <video class="video2" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/mage-8beae0975cae649908a0d539435306db.webm" autoplay muted loop />
+            </div>
+
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <a asp-page="./Champions/List" style="text-decoration:none; color:rgba(0, 0, 0, 0.81) " id="lux" class="champname"> Lux </a>
+                <p id="lady" class="champinfo">The Lady of Luminosity</p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p id="mages" style="text-align:justify" class="Info"> Mages are champions who typically possess great reach, ability-based area of effect damage and crowd control, and who use all of these strengths in tandem with each other to trap and destroy enemies from a distance. Though mages tend to focus on killing prime targets in combat, they can also fall back to their innate crowd control and utility to manipulate key opponents.</p>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-sm-12">
+            <p id="marks" class="text6">Marksmen</p>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <img class="img1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/marksman-b339ed8fd7e04ff2c3fca022c5d299fb.png" />
+            </div>
+            <div class="form-group col-sm-6">
+                <video class="video2" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/marksman-d7367883b0979249f9309c03efdd23d9.webm" autoplay muted loop />
+            </div>
+
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <a asp-page="./Champions/List" style="text-decoration:none; color:rgba(0, 0, 0, 0.81) " id="jinx" class="champname"> Jinx </a>
+                <p id="loose" class="champinfo">The Loose Cannon</p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p id="marksmen" style="text-align:justify" class="Info">Marksmen are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team.</p>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-sm-12">
+            <p id="supp" class="text6">Supports</p>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <video class="video2" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/support-10b76f08757ee3ce7169c344108b457b.webm" autoplay muted loop />
+            </div>
+            <div class="form-group col-sm-6">
+                <img class="img1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/support-d63ae08baf517425864ddc020a5871d5.png" />
+            </div>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <p id="supports" style="text-align:justify" class="Info"> Supports assist their allies with potent utility and keep enemies at bay with crowd control.  Weak when alone, supports are capable of massively amplifying their teammates' power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team.</p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <a asp-page="./Champions/List" style="text-decoration:none; color:rgba(0, 0, 0, 0.81) " id="thresh" class="champname"> Thresh </a>
+                <p id="chain" class="champinfo">The Chain Warden</p>
+            </div>
+
+        </div>
+
+        <div class="col-sm-12">
+            <p id="tank" class="text6">Tanks</p>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <video class="video2" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/tank-7bc533fcd17c3eca769764141020debb.webm" autoplay muted loop />
+            </div>
+            <div class="form-group col-sm-6">
+                <img class="img1" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-pl/production/en-pl/static/tank-1245abc326bd98c567ab22659719a1a3.png" />
+            </div>
+        </div>
+
+        <div class="form-row" style="text-align:center">
+            <div class="form-group col-sm-6">
+                <p id="tanks" style="text-align:justify" class="Info"> Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank's purpose isn't usually to kill opponents; rather, tanks excel at disrupting enemies and diverting focus to themselves, allowing them to lock down specific targets (or several targets at once), as well as remove threats from their allies.</p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <a asp-page="./Champions/List" style="text-decoration:none; color:rgba(0, 0, 0, 0.81) " id="leo" class="champname"> Leona </a>
+                <p id="dawn" class="champinfo">The Radiant Dawn</p>
+            </div>
+
+        </div>
+
+
+
+        <footer class="col-sm-12 footer1">
+            <a id="playnow" class="text1" style="color:dimgrey; font-style:italic;  font-weight:bold; font-family:Arial; text-decoration:none;" asp-page="Downloadpage">Play now!</a>
+            <img class="img1" src="~/Photos/noverla-graphic-footer.jpg" />
+        </footer>
+
+
+        <script type="text/javascript">
+
+            var dataReload = document.querySelectorAll("[data-reload]");
+
+            var arrLang = {
+                en : {
+                    welcome: ' Welcome to my League of Legends website project',
+                    play: 'Play now!',
+                    choose: 'Choose your',
+                    champ: 'CHAMPION',
+                    wether: 'Whether you like to dive straight into the fray, support your teammates, or <br /> something in between, there’s a spot for you on the Rift.',
+                    classs: 'Classes',
+                    assassin: 'Assassins',
+                    AssInfo: '"Assassins" are fragile but agile damage-focused melee champions that look to swiftly take down their targets. Due to their mostly melee nature, Assassins must put them themselves into dangerous positions in order to execute their targets.',
+                    akali: 'Akali',
+                    rogue: 'The Rogue Assassin',
+                    fighter: 'Fighters',
+                    fighters: 'Fighters are a diverse group of short- ranged combatants who excel at both dealing and surviving damage.With easy access to heavy, continuous damage and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, but their limited range puts them at constant risk of being kept at bay by their opponents via crowd control, range and mobility.',
+                    yas: 'Yasuo',
+                    unforgiven: 'The Unforgiven',
+                    mage: 'Mages',
+                    lux: 'Lux', 
+                    lady: 'The Lady of Luminosity',
+                    mages: ' Mages are champions who typically possess great reach, ability- based area of effect damage and crowd control, and who use all of these strengths in tandem with each other to trap and destroy enemies from a distance.Though mages tend to focus on killing prime targets in combat, they can also fall back to their innate crowd control and utility to manipulate key opponents.',
+                    marks: ' Marksmen',
+                    jinx: 'Jinx', 
+                    loose: 'The Loose Cannon',
+                    marksmen: 'Marksmen are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team.',
+                    supp: 'Supports',
+                    supports: 'Supports assist their allies with potent utility and keep enemies at bay with crowd control.Weak when alone, supports are capable of massively amplifying their teammates power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team.',
+                    thresh :'Thresh',
+                    chain: 'The Chain Warden',
+                    leo: 'Leona',
+                    dawn: 'The Radiant Dawn',
+                    tank: 'Tanks',
+                    tanks: "Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank's purpose isn't usually to kill opponents; rather, tanks excel at disrupting enemies and diverting focus to themselves, allowing them to lock down specific targets (or several targets at once), as well as remove threats from their allies.",
+                    playnow: 'Play now!',
+
+            },
+                mk : {
+                    welcome: 'Добредојдовте во мојот лига на легенди веб-сајт проект',
+                    play: 'Играј сега!',
+                    choose: 'Избери го твојот',
+                    champ: 'ШАМПИОН',
+                    wether: 'Без разлика дали сакате да се нурнете директно во кавгата, да ги поддржувате своите соиграчи или нешто помеѓу нив, има место за вас на Рифт.',
+                    classs: 'Класови',
+                    assassin: 'Асасин',
+                    AssInfo: '"Асасинсот" се кревки, но агилни меле шампиони фокусирани на оштетување, кои бараат брзо да ги симнат своите цели. Поради нивната претежно мекота природа, Атентаторите мора да ги стават во опасни места за да ги извршат своите цели.',
+                    akali: 'Акали',
+                    rogue: 'Убиецот на Нечесните',
+                    fighter: 'Борач',
+                    fighters: 'Борците се разновидна група борци со краток опсег, кои се одликуваат со справување и со кои преживеаја штети. Со лесен пристап до тешки, континуирани оштетувања и низа вродени одбрани, борците напредуваат во продолжени борби додека бараат непријатели да ги симнат, но нивниот ограничен опсег ги става во постојан ризик нивните противници да бидат зачувани преку контрола на толпата, опсег и подвижност.',
+                    yas: 'Јасуо',
+                    unforgiven: 'Незаборавниот',
+                    mage: 'Магионичари',
+                    lux: 'Лукс',
+                    lady: 'Госпоѓата на Светлината',
+                    mages: 'Магионичарите се шампиони кои обично поседуваат голема дострела, област базирана на способност за оштетување на ефектите и контрола на толпата, и кои ги користат сите овие јаки во тандем едни со други за да ги фатат и да ги уништат непријателите од далечина. Иако мажите имаат тенденција да се фокусираат на убивање на главните цели во борба, тие исто така можат да се вратат на контролата на својата вродена толпа и алатка за манипулирање со клучните противници.',
+                    marks: 'Стрелци',
+                    jinx: 'Џинкс',
+                    loose: 'Лабавиот топ',
+                    marksmen: 'Стрелците се разиграни шампиони чија моќ речиси исклучиво се врти околу нивните основни напади: користејќи го својот дофат на копно континуирано оштетување од далечина, маркерите се способни да ги симнат дури и најтешките противници кога се позиционирани зад безбедноста на својот тим.',
+                    supp: 'Поддржувачи',
+                    supports: 'Поддржувачите им помагаат на своите сојузници со моќна алатка и ги одржуваат непријателите во залиха со контролата на толпата.Чувајте кога се сами, поддржувачите се способни масовно да ги засилуваат своите соиграчи моќ да станат најсилна класа во групна борба(или борбени тимови), снабдувајќи ја клучна алатка или контрола на толпата на спојката моменти да се спасат сојузниците од смрт и да се овозможи преземање на непријателскиот тим. ',
+                    thresh: 'Треш',
+                    chain: 'Водич на ланци',
+                    leo: 'Леона',
+                    dawn: 'Зрачна зора',
+                    tank: 'Тенк',
+                    tanks: "Тенковите се строги шампиони на мики кои жртвуваат штета во замена за моќната контрола на толпата. Иако е во состојба да ги ангажира непријателите во борба, целта на резервоарот не е обично да убива противници; наместо тоа, тенковите се одликуваат со нарушување на непријателите и го насочуваат вниманието кон себе, дозволувајќи им да заклучат специфични цели (или неколку цели одеднаш), како и да ги отстранат заканите од нивните сојузници.",
+                    playnow: 'Играј сега!',
+                    
+                }
+
+                };
+
+            if (window.location.hash) {
+                if (window.location.hash === "#mk") {
+                    hi.textContent = arrLang.mk.welcome;
+                    play.textContent = arrLang.mk.play;
+                    choose.textContent = arrLang.mk.choose;
+                    champ.textContent = arrLang.mk.champ;
+                    wether.textContent = arrLang.mk.wether;
+                    classs.textContent = arrLang.mk.classs;
+                    assassin.textContent = arrLang.mk.assassin;
+                    AssInfo.textContent = arrLang.mk.AssInfo;
+                    akali.textContent = arrLang.mk.akali;
+                    rogue.textContent = arrLang.mk.rogue;
+                    fighter.textContent = arrLang.mk.fighter;
+                    fighters.textContent = arrLang.mk.fighters;
+                    yas.textContent = arrLang.mk.yas;
+                    unforgiven.textContent = arrLang.mk.unforgiven;
+                    mage.textContent = arrLang.mk.mage;
+                    mages.textContent = arrLang.mk.mages;
+                    lux.textContent = arrLang.mk.lux;
+                    lady.textContent = arrLang.mk.lady;
+                    marks.textContent = arrLang.mk.marks;
+                    jinx.textContent = arrLang.mk.jinx;
+                    loose.textContent = arrLang.mk.loose;
+                    marksmen.textContent = arrLang.mk.marksmen;
+                    supp.textContent = arrLang.mk.supp;
+                    supports.textContent = arrLang.mk.supports;
+                    thresh.textContent = arrLang.mk.thresh;
+                    chain.textContent = arrLang.mk.chain;
+                    leo.textContent = arrLang.mk.leo;
+                    dawn.textContent = arrLang.mk.dawn;
+                    tank.textContent = arrLang.mk.tank;
+                    tanks.textContent = arrLang.mk.tanks;
+                    playnow.textContent = arrLang.mk.playnow;
+
+                    
+                }
+            }
+
+            for (i = 0; i <= dataReload.length; i++) {
+                dataReload[i].onclick = function () {
+                    location.reload(true);
+                };
+            }
+        </script>
+
+    </body>
+
+

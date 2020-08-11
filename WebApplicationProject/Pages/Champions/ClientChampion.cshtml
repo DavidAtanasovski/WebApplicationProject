@@ -1,0 +1,52 @@
+﻿@page
+@model WebApplicationProject.Pages.Champions.ClientChampionModel
+@{
+    ViewData["Title"] = "ClientChampion";
+}
+
+<h1>Client Champion</h1>
+
+<table class="table" id="resData">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Overview</th>
+            <th>Ultimate Name</th>
+            <th>Ultimate Desc</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+
+</table>
+
+
+@section Scripts{
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
+    <script>
+        $(function () {
+            var roles = ["Unknown", "Top", "Jungle", "Mid", "Adc", "Support"];
+            $.ajax("/api/Champions", { method: "get" })
+                .then(function (response) {
+                    $("#resData").dataTable({
+                        data: response,
+                        columns: [
+                            { "data": "name" },
+                            { "data": "overview" },
+                            { "data": "ultimate name" },
+                            { "data": "ultimate desc" },
+                            {
+                                "data": "role",
+                                "render": function (data) {
+                                    return roles[data];
+                                }
+                            }
+                        ]
+                    });
+                })                                       
+        })
+    </script>
+
+}

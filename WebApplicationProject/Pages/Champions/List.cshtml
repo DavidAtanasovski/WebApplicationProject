@@ -1,0 +1,86 @@
+﻿@page
+@model WebApplicationProject.ListModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@{
+    ViewData["Title"] = "List";
+}
+    <head>
+        <link href="~/css/list.css" rel="stylesheet" type="text/css" />
+    </head>
+<h1 style="text-align:center;">Champion List</h1>
+
+<form method="get">
+    <div id="top" class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="search" asp-for="SearchTerm">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>Name</p>
+            </th>
+            <th >
+                 <p style="margin-left:50px;">Apperance </p>
+            </th>
+
+        </tr>
+    </thead>
+    @foreach (var champion in Model.Champions)
+    {
+        var photoPath = "~/Photos/" + champion.LinkUrl;
+
+<tr style="font-size:20px; font-family:Arial; font-style:italic; font-weight:bold;">
+
+    <td>
+        @champion.Name
+    </td>
+    <td>
+        <img class="pic2" style="margin-left:50px;" src="@photoPath" asp-append-version="true" />
+    </td>
+    <td>
+        <p style="margin-bottom:-20px; margin-left:250px;"> More info..  </p>
+        <img class="img1" style="margin-bottom:100px; margin-left:350px;" src="~/Photos/arrow2.png" />
+
+    </td>
+
+
+   
+    <td>
+        <a class="btn btn-outline-secondary" asp-page="./Detail" asp-route-championId="@champion.Id">
+            <i class="fas fa-search-plus"></i>
+        </a>
+        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        {
+            <a class="btn btn-outline-secondary" asp-page="./Delete" asp-route-championId="@champion.Id">
+                <i class="fas fa-trash"></i>
+            </a>
+        }
+    </td>
+</tr>
+    }
+
+</table>
+<div style="margin-top:100px;" class="form-row" >
+    <div class="col-sm-6">
+        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        {
+            <a class="btn btn-primary" asp-page="./Create">Create a Champion</a>
+
+        }
+    </div>
+    <div class="col-sm-6">
+        <a class="btn btn-primary" href="#top">Back to the top!</a>
+    </div>
+</div>

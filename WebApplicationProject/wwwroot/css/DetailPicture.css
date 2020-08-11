@@ -1,0 +1,21 @@
+﻿body {
+    background-color:#bdc8c4;
+    font-family:Arial;
+   
+    
+}
+img{
+   display:block;
+   margin: 0 auto 0 auto;
+   width:550px;
+   height:auto;
+
+}
+
+video {
+    margin: 40px auto 0 auto;
+    width: 450px;
+    height: auto;
+    
+    
+}

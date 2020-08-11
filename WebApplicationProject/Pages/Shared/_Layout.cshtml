@@ -1,0 +1,163 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SigninManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplicationProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/StyleImage.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/solid.min.css" />
+    <link href="~/css/Logo.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>
+                            <img class="logoimg" src="~/Photos/2947076315606608460043.png" />
+                        </li>
+                        <li class="nav-item">
+                            <a id="home" class="nav-link font-weight-bold text-dark" asp-area="" asp-page="/Homepage">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="info" class="nav-link font-weight-bold text-dark" asp-area="" asp-page="/Infopage">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="champs" class="nav-link font-weight-bold text-dark" asp-area="" asp-page="/Champions/List">Champions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="uni" class="nav-link font-weight-bold text-dark" asp-area="" asp-page="/Universe">Universe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="down" class="nav-link font-weight-bold text-dark" asp-area="" asp-page="/DownloadPage">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="playersupport" class="nav-link font-weight-bold text-dark" asp-area="" asp-page="/PlayerSupport/Main">Player Support</a>
+                        </li>
+                        @if (SigninManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                        {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link font-weight-bold text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Adminitration
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a id="usermanagment" class="font-weight-bold text-dark dropdown-item" asp-area="" asp-controller="AdminUser">Manage Users</a>
+                                <a id="rolemanagment" class="font-weight-bold text-dark dropdown-item" asp-area="" asp-controller="AdminRole">Manage Roles</a>
+                            </div>
+                        </li>
+                        }
+
+                    </ul>
+                    <ul class="navbar-nav dropdown">
+                        <li>
+                            <a class="font-weight-bold text-dark nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Language
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="langDropdown">
+                                <a class="font-weight-bold text-dark dropdown-item" href="#en">eng</a>
+                                <a class="font-weight-bold text-dark dropdown-item" href="#mk">мк</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class=" footer text-muted">
+        <div class="container">
+            &copy; 2020 - WebApplicationProject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+
+
+    <script type="text/javascript">
+
+        var dataReload = document.querySelectorAll("[data-reload]");
+
+        var arrLang = {
+            en: {
+               home: 'Homepage',
+               info: 'Info',
+               champs: 'Champions',
+               uni: 'Universe',
+                down: 'Download',
+                playersupport: 'Player Support',
+                usermanagment: 'Manage Users',
+                rolemanagment: 'Manage Roles',
+                navbarDropdown:' Adminitration'
+               
+              
+
+            },
+            mk: {
+                home: 'Почетна',
+                info: 'Инфо',
+                champs: 'Шампиони',
+                uni: 'Универзум',
+                down: 'Превземи',
+                playersupport: 'Контактирај не',
+                usermanagment: 'Менаџирај корисници',
+                rolemanagment: 'Менаџирај Позиции',
+                navbarDropdown:'Aдминистрација'
+
+               
+
+
+            }
+
+        };
+
+        if (window.location.hash) {
+            if (window.location.hash === "#mk") {
+
+                home.textContent = arrLang.mk.home;
+                info.textContent = arrLang.mk.info;
+                champs.textContent = arrLang.mk.champs;
+                uni.textContent = arrLang.mk.uni;
+                down.textContent = arrLang.mk.down;
+                playersupport.textContent = arrLang.mk.playersupport;
+                usermanagment.textContent = arrLang.mk.usermanagment;
+                rolemanagment.textContent = arrLang.mk.rolemanagment;
+                navbarDropdown.textContent = arrLang.mk.navbarDropdown;
+              
+            
+                
+                
+
+
+            }
+        }
+
+        for (i = 0; i <= dataReload.length; i++) {
+            dataReload[i].onclick = function () {
+                location.reload(true);
+            };
+        }
+    </script>
+</body>
+</html>

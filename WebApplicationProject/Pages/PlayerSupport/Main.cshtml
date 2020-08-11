@@ -1,0 +1,44 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@{
+
+    ViewData["Title"] = "Main";
+}
+
+
+    <body>
+
+        <div style="margin-top:40px; font-size:30px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <p>Send a ticket</p>
+
+        </div>
+
+        <div style=" font-size:25px;  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ">
+            <p> What is your issue related to? </p>
+        </div>
+
+
+        <div class="form-row" style=" margin-top:10%;">
+
+            <div class="form-group justify-content-around col-sm-4">
+                <img class="img1" src="~/Photos/Support-Tech.jpg" />
+                <a style="margin-top:30px; margin-left:13%;" class="btn btn-primary" asp-page="./TechnicalSupport">Technical Support</a>
+            </div>
+            <div class="form-group col-sm-4">
+                <img class="img1" src="~/Photos/Support-Tech.jpg" />
+                <a style="margin-top:30px; margin-left:13%;" class="btn btn-primary" asp-page="./InGameSupport">In Game Support</a>
+            </div>
+            <div class="form-group col-sm-4">
+                <img class="img1" src="~/Photos/Support-Tech.jpg" />
+                <a style="margin-top:30px; margin-left:13%;" class="btn btn-primary" asp-page="./AccountSupport">Account Support</a>
+            </div>
+
+        </div>
+
+        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        {
+            <a style="margin-top:100px;" asp-page="./List" class="btn btn-primary">All Requests</a>
+        }
+
+     </body>

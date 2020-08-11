@@ -1,0 +1,61 @@
+﻿@page
+@model WebApplicationProject.Pages.PlayerSupport.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+
+
+    <body>
+        <h1 style="margin-bottom:50px; text-align:center;">Player Support Detail for @Model.PlayerSupport.Username</h1>
+
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <p>  Account issue: </p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p> @Model.PlayerSupport.Account</p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <p> In Game issue: </p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p>@Model.PlayerSupport.InGame</p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <p>Technical Support issue: </p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p>@Model.PlayerSupport.Technical</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <p>  Subject: </p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p> @Model.PlayerSupport.Subject</p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <p>  Description: </p>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <p> @Model.PlayerSupport.Description</p>
+            </div>
+        </div>
+    </body>

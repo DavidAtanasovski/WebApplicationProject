@@ -1,0 +1,15 @@
+﻿@page "{championId:int}"
+@model WebApplicationProject.Pages.Champions.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Champion</h1>
+<div class="alert alert-danger">
+    Are you sure you want to delete @Model.Champion.Name?
+</div>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="List" class="btn btn-outline-primary">Cancel</a>
+</form>
+

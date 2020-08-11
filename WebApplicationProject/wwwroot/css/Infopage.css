@@ -1,0 +1,153 @@
+﻿body {
+}
+
+.text1 {
+    text-align: center;
+    font-family: Arial;
+    font-style: italic;
+    font-size: 25px;
+    margin-bottom: -6px;
+}
+
+.text2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Arial;
+    margin-bottom: -6px;
+}
+
+.letsgo {
+    text-align:center;
+    font-size:25px;
+    color:black;
+}
+
+.pic1 {
+    position:relative;
+    width: 100%;
+    height: auto;
+
+}
+
+.video1{
+    width:100%;
+    height:auto;
+}
+
+.text3 {
+    text-align:center;
+    font-family:Arial;
+    font-style:italic;
+    font-size:45px;
+    margin-top:30px;
+   
+    font-weight:bold;
+}
+
+.text4 {
+    text-align:center;
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:20px;
+    
+}
+
+.text5{
+    justify-content:left;
+    font-family:Arial;
+    font-size:40px;
+    font-weight:bold;
+    font-style:italic;
+    margin-bottom:-6px;
+}
+
+.text6{
+    font-family:Arial;
+    font-size:14px;
+    justify-content:left;
+}
+.text7{
+    margin-top:33px;
+    font-family:Arial;
+    font-weight:bold;
+    font-size:25px;
+    margin-bottom:-6px;
+}
+
+.text8 {
+    text-align:right;
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: -6px;
+}
+
+.text9 {
+    text-align:right;
+    font-family: Arial;
+    font-size: 14px;
+    justify-content: left;
+}
+
+.text10 {
+    text-align:right;
+    margin-top: 33px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: -6px;
+}
+
+.text11 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+}
+
+.footer1 {
+    text-align: center;
+}
+
+.pic2 {
+
+    width: 100%;
+    height: auto;
+}
+
+.text12{
+    position:absolute;
+    font-size:20px;
+    bottom:75%;
+    left:5%; 
+   
+   
+ 
+}
+.text13 {
+    position: absolute;
+    font-size: 20px;
+    bottom: 65%;
+    left: 5%;
+   
+    
+}
+.text14 {
+    position: absolute;
+    font-size: 20px;
+    bottom: 55%;
+    left: 5%;
+   
+    
+}
+.text15 {
+    position: absolute;
+    font-size: 20px;
+    bottom: 45%;
+    left: 5%;
+    
+    
+}

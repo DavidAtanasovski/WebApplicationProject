@@ -1,0 +1,52 @@
+﻿@page  "{PlayerSupportID:int?}"
+@model WebApplicationProject.Pages.PlayerSupport.TechnicalSupportModel
+@{
+
+    ViewData["Title"] = "TechnicalSupport";
+}
+
+    <form method="post">
+
+        <input type="hidden" asp-for="PlayerSupport.Id" />
+
+        <div style="margin-top:40px; font-size:30px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <p>Send a ticket</p>
+            <p> Technical Support</p>
+        </div>
+        <div style="margin-top:30px;">
+            <div class=" col-sm-6">
+                <label asp-for="PlayerSupport.Technical"></label>
+                <select class="form-control" asp-for="PlayerSupport.Technical" asp-items="@Model.Technical">
+                   
+                </select>
+                <span class="text-danger" asp-validation-for="PlayerSupport.Technical"></span>
+            </div>
+        </div>
+
+        <div style="margin-top:30px;">
+            <div class="col-sm-6">
+                <label asp-for="PlayerSupport.Subject"></label>
+                <input class="form-control" asp-for="PlayerSupport.Subject" />
+                <span class=" text-danger" asp-validation-for="PlayerSupport.Subject"></span>
+            </div>
+        </div>
+        <div style="margin-top:30px;">
+            <div class=" col-sm-6">
+                <label asp-for="PlayerSupport.Username"></label>
+                <input class="form-control" asp-for="PlayerSupport.Username" />
+                <span class=" text-danger" asp-validation-for="PlayerSupport.Username"></span>
+            </div>
+        </div>
+        <div style="margin-top:30px">
+            <div class=" col-sm-12">
+                <label asp-for="PlayerSupport.Description"></label>
+                <input class="form-control" asp-for="PlayerSupport.Description" />
+                <span class=" text-danger" asp-validation-for="PlayerSupport.Description"></span>
+            </div>
+        </div>
+
+
+        <button style="margin-top:30px;" type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+

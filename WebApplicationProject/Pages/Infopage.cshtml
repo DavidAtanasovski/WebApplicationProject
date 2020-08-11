@@ -1,0 +1,110 @@
+﻿@page
+@{
+    ViewData["Title"] = "Infopage";
+}
+
+ <link href="~/css/Infopage.css" rel="stylesheet" type="text/css" />
+
+ <body class="container-fluid">
+     <div class="col-sm-12">
+         <p class="text1">Welcome to the rift!</p>
+         <p class="text2">Learn the basics</p>
+         <p class="letsgo">
+             <a style="font-weight:bold; color:rgba(25, 25, 25, 0.98); text-decoration:none; font-family:Arial" href="#letsgo">Let's go!</a>
+         </p>
+     </div>
+
+     <div class="col-sm-12">
+
+         <img id="5" class="pic1" src="~/Photos/rift.jpg" />
+         <a style="font-family:Arial; font-size:30px; color:#979da1; font-style:italic; text-decoration:none; text-align:center;"  class="text12" href="#1">Destroy the base</a>             
+         <a style="font-family:Arial; font-size:30px; color:#aaa0a8; font-style:italic; text-decoration:none; text-align:center;"  class="text13" href="#2">Clear the path</a>                             
+         <a style="font-family:Arial; font-size:30px; color:#979da1; font-style:italic; text-decoration:none; text-align:center;"  class="text14" href="#3">Take on the Jungle </a>
+         <a style="font-family:Arial; font-size:30px; color:#aaa0a8; font-style:italic; text-decoration:none; text-align:center;"  class="text15" href="#4">Choose your lane</a>
+                    
+     </div>
+
+     <div class="col-sm-12">
+         <a id="letsgo"></a>
+         <p class="text3">What is league of legends?</p>
+         <p class="text4">League of legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other's base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory!</p>
+     </div>
+
+     <div class="col-sm-12">
+         <video class="video1" src="~/Videos/y2mate.com - League of Legends Gameplay Trailer by NiceTryIan _ Community Collab_76cG7bcmmqM_1080p.mp4" muted loop autoplay />
+     </div>
+
+     <div id="1" style="margin-top: 60px;" class="form-row">
+         <div class="form-group col-sm-4">
+             <p class="text5">Destroy the Base</p>
+             <p class="text6">The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus first to win the game.</p>
+             <p class="text7">Enemy Nexus</p>
+             <p class="text6">Located in the enemy team’s base, the enemy Nexus is just like yours. Destroying the enemy Nexus wins your team the game.</p>
+             <a  style="margin-top:70px;" href="#5" class="btn btn-info">Back to the top!</a>
+
+         </div>
+         <div class="form-group col-sm-8">
+             <img class="pic1" src="~/Photos/Screenshot_1.png" />
+         </div>
+
+     </div>
+
+     <div id="2" style="margin-top:60px;" class="form-row">
+
+         <div class="form-group col-sm-8">
+             <img class="pic1" src="~/Photos/Screenshot_2.png" />
+         </div>
+         <div class="form-group col-sm-4">
+
+             <p class="text8">Clear the path</p>
+             <p class="text9">Your team needs to clear at least one lane to get to the enemy Nexus. Blocking your path are defense structures called turrets and inhibitors. Each lane has three turrets and one inhibitor, and each Nexus is guarded by two turrets.</p>
+             <p class="text10">Turrets</p>
+             <p class="text9">Turrets deal damage to enemy minions and champions, and provide limited vision from the Fog of War for their team.</p>
+             <a style="margin-top:70px;" href="#5" class="btn btn-info">Back to the top!</a>
+         </div>
+     </div>
+
+     <div id="3" style="margin-top: 60px; " class="form-row">
+         <div class="form-group col-sm-4">
+             <p class="text5">Take on the Jungle</p>
+             <p class="text6">In between the lanes is the jungle, where neutral monsters and jungle plants reside. The two most important monsters are Baron Nashor and the Drakes. Killing these units grants unique buffs for your team and can also turn the tide of the game.</p>
+             <p class="text7">Baron Nashor</p>
+             <p class="text6">Baron Nashor is the most powerful monster in the jungle. Killing Baron grants the slayer’s team bonus attack damage and ability power.</p>
+             <a style="margin-top:70px;" href="#5" class="btn btn-info">Back to the top!</a>
+         </div>
+         <div class="form-group col-sm-8">
+             <img class="pic1" src="~/Photos/Screenshot_3.png" />
+         </div>
+
+     </div>
+
+     <div id="4" style="margin-top:60px;" class="form-row">
+
+         <div class="form-group col-sm-8">
+             <img class="pic1" src="~/Photos/Screenshot_4.png" />
+         </div>
+
+         <div style="margin-top: 10%;" class="form-group col-sm-4">
+
+             <p class="text8">Choose your lane</p>
+             <p class="text9">There are five positions that make up the recommended team comp for the game. Each lane lends itself to certain kinds of champions and roles—try them all or lock in to the lane that calls you.</p>
+             <a style="margin-top:70px;" href="#5" class="btn btn-info">Back to the top!</a>
+
+         </div>
+     </div>
+
+     <footer  style="margin-top:50px;" class="col-sm-12 footer1">
+         <a class="text11" style="color:dimgrey; font-style:italic;  font-weight:bold; font-family:Arial; text-decoration:none;" asp-page="Downloadpage">Play now!</a>
+         <img class="pic2" src="~/Photos/noverla-graphic-footer.jpg" />
+     </footer>
+
+
+
+
+
+
+
+
+
+ </body>
+
